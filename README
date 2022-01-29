@@ -1,0 +1,31 @@
+Dodałem wszystkie niezbędne dependencies dla podłączenia do bazy dancyh -> https://i.imgur.com/VDMGuPP.jpg
+
+Ustawiłem poproawny localhost do podłaczenia oraz nazwę mojej bazy danych -> https://i.imgur.com/8wlaifV.jpg
+
+Screen z phpMyAdmin -> https://i.imgur.com/MHvIf3I.jpg
+Dla servera localnego korzystam z MAMP
+
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Wychodzi błąd:
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2022-01-29 17:16:48.062 ERROR 29444 --- [  restartedMain] o.s.b.d.LoggingFailureAnalysisReporter   : 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Field booksRepository in com.example.again.controllers.CatalogController required a bean of type 'repository.BooksRepository' that could not be found.
+
+The injection point has the following annotations:
+	- @org.springframework.beans.factory.annotation.Autowired(required=true)
+
+
+Action:
+
+Consider defining a bean of type 'repository.BooksRepository' in your configuration.
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Probówałęm inizjalizować projekt bez używania adnotacji beanowej Autowired -> inizjalizuje ale tabele w bazie danych nie tworze.
